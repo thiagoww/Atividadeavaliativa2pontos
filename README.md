@@ -55,10 +55,45 @@ void n(int a) {
 /////////////////////////////////////
 2.  Resposta Letra e).
 
+void main(){
+  SmartTv Smart = SmartTv('HD2','Philco',3251,52);
+  Smart.ligar();
+  Smart.desligar();
+
+  
+}
+class Aparelhos{
+  String nome;
+  String marca;
+  int num_serie;
+  int volume;
+  
+  void ligar(){
+    print('Seu aparelho $nome ligou!');
+  }
+  
+  void desligar(){
+    print('Seu aparelho $nome desligou!');
+  }
+  
+
+  
+  
+}
+
+class SmartTv extends Aparelhos{
+  SmartTv(String nome, String marca, int num_serie, int volume){
+    this.nome = nome;
+    this.marca=marca;
+    this.num_serie=num_serie;
+    this.volume=volume;  
+  }  
+}
 
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////THE END////////////////////////////////////
 
 
 
