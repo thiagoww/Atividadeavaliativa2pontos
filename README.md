@@ -42,4 +42,27 @@ void n(int b) {
 
 ////////////////////////////////////////
 2.  Resposta Letra d).
+void main() {
+  n(5);
+}
+void n(int a) {
+  int q = 0;
+  for (int b = 1; b <= a; b++) {
+    q = q + b;
+  }
+  print('quantidade = $q');
+}
+/////////////////////////////////////
+2.  Resposta Letra e).
+
+
+
+
+
+
+
+
+
+
+
 
