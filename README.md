@@ -99,5 +99,50 @@ class SmartTv extends Aparelhos{
 ///////////// atividade valendo 4 pontos////////////
 
 
+void main() {
+ MeuBanco clt = new MeuBanco(123,'thiago',1000);
+ clt.criarconta();
+ clt.deposito(100);
+ clt.saque(200);
+ clt.transferencia(123, 132, 300);
+  ////////////////
+ double valorsaldo = clt.saldoatual();
+ print('Saldo atual: $valorsaldo');
+  
+}
+
+///////////////
+class MeuBanco{
+  
+  int numeroconta;
+  String nome;
+  double saldoc;
+  
+  MeuBanco(this.numeroconta, this.nome, this.saldoc);
+  //////////
+   void criarconta () {
+     print ('Nome:$nome');
+     print ('Númerodaconta: $numeroconta');
+   }
+  /////////////
+  void deposito (double valor) {
+    print('Depositovalor: $valor');
+    saldoc = saldoc + valor;
+    print('Saldodaconta: $saldoc');
+  }
+  /////////////
+  void saque (double valorsaq) {
+    print ('Saquede: $valorsaq');
+    saldoc = saldoc - valorsaq;
+    print('Saldodaconta: $saldoc');
+    
+  }
+  ///////////
+  void transferencia (int x, int z, double y) {
+    print ('Conta $x transfere $y para a conta $z');
+    saldoc = saldoc - y;
+  }
+  double saldoatual () => this.saldoc;
+}
 
 
