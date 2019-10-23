@@ -100,11 +100,11 @@ class SmartTv extends Aparelhos{
 
 
 void main() {
- MeuBanco clt = new MeuBanco(123,'thiago',1000);
+ MeuBanco clt = new MeuBanco(677,'thiago',500);
  clt.criarconta();
- clt.deposito(100);
- clt.saque(200);
- clt.transferencia(123, 132, 300);
+ clt.deposito(50);
+ clt.saque(30);
+ clt.transferencia(677, 231, 250);
   ////////////////
  double valorsaldo = clt.saldoatual();
  print('Saldo atual: $valorsaldo');
@@ -138,9 +138,9 @@ class MeuBanco{
     
   }
   ///////////
-  void transferencia (int x, int z, double y) {
-    print ('Conta $x transfere $y para a conta $z');
-    saldoc = saldoc - y;
+  void transferencia (int x, int y, double rr) {
+    print ('Conta$x ->$y para a conta $y');
+    saldoc = saldoc - rr;
   }
   double saldoatual () => this.saldoc;
 }
